@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Order Confirmation Mail</title>
+  </head>
+  <body>
+    <div>
+      <h1>Your Learning Academy order is confirmed</h1>
+      <p>And we're just as excited as you are.</p>
+    </div>
+    <br />
+    <br />
+    <div>
+      <h1>Here's what you ordered:</h1>
+      <table style="border: 1px solid black">
+        <tr>
+          <td>Order #: <%= order._id %></td>
+          <td>Order Date: <%= order.date %></td>
+        </tr>
+      </table>
+      <table style="width: 90%; margin: auto">
+        <tr>
+          <td>Item</td>
+          <td>Qty</td>
+          <td>Price</td>
+        </tr>
+      </table>
+      <table style="width: 90%; margin: auto">
+        <tr>
+          <td><%= order.name %></td>
+          <td>1</td>
+          <td><%= order.price %></td>
+        </tr>
+      </table>
+      <table>
+        <tr>
+          <td>Subtotal:</td>
+          <td>$<%= order.price %></td>
+        </tr>
+      </table>
+      <table>
+        <tr>
+          <td>Total:</td>
+          <td>$<%= order.price %></td>
+        </tr>
+      </table>
+    </div>
+  </body>
+</html>
